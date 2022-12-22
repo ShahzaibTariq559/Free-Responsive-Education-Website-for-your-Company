@@ -1,0 +1,628 @@
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --color-primary: #6c63ff;
+    --color-success: #00bf8e;
+    --color-warning: #f7c94b;
+    --color-danger: #f75842;
+    --color-danger-varient: rgba(247, 88, 66, 0.4);
+    --color-white: white;
+    --color-light: rgba(255, 255, 255, 0.7);
+    --color-black: black;
+    --color-bg: #1f2641;
+    --color-bg1: #2e3267;
+    --color-bg2: #424890;
+    --container-width-lg: 80%;
+    --container-width-md: 90%;
+    --container-width-sm: 94%;
+    --transition: all 400ms ease;
+
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.7;
+    color: var(--color-white);
+    background-color: var(--color-bg);
+    background-image: url(/images/bg-texture.png);
+}
+
+.container {
+    width: var(--container-width-lg);
+    margin: auto;
+}
+
+section {
+    padding: 6rem 0;
+}
+
+section h2 {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5 {
+    line-height: 1.2;
+
+}
+
+h1 {
+    font-size: 2.4rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+
+a {
+    color: var(--color-white);
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.btn {
+    color: var(--color-black);
+    background: var(--color-white);
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 1px solid transparent;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background:transparent;
+    color: var(--color-white);
+    border: 1px solid var(--color-white);
+}
+
+.btn-primary {
+    color: var(--color-white);
+    background: var(--color-danger);
+}
+
+/* ############# NAV ############# */
+
+nav {
+    background: transparent;
+    width: 100vw;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    z-index: 11;
+}
+
+/* CHANGE NAV COLOR ON SCROLL */
+
+.window-scroll {
+    background: var(--color-primary);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+}
+
+/* CHANGE NAV COLOR ON SCROLL END*/
+
+.nav_container {
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    display: flex;
+}
+
+nav button {
+    display: none;
+}
+
+.nav_menu {
+gap: 4rem;
+display: flex;
+align-items: center;
+}
+
+.nav_menu a {
+    font-size: .9rem;
+    transition: var(--transition);
+}
+
+.nav_menu a:hover {
+    color: var(--color-bg2);
+}
+
+/* ############# NAV END ############# */
+
+/* ############# HEADER START ############# */
+
+header {
+    position: relative;
+    top: 3rem;
+    margin-bottom: 5rem;        
+    overflow: hidden;
+}
+
+.header_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 5rem;
+    height: 100%;
+}
+
+.header-left p {
+    margin: 1rem 0 2.4rem;
+}
+
+/* ############# HEADER END ############# */
+
+/* ############# CATEGORIES START ############# */
+
+.categories {
+    background: var(--color-bg1);
+    height: 35rem;
+}
+
+.categories h1 {
+    line-height: 1;
+    margin-bottom: 3rem;
+}
+
+.category-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    /* gap: 3rem; */
+}
+
+.category-left {
+    margin-right: 4rem;
+}
+
+.category-left p {
+    margin: 1rem 0 3rem;
+}
+
+.category-right {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+}   
+
+.category:nth-child(2) .category-icon{
+    background: var(--color-danger);
+}
+
+.category:nth-child(3) .category-icon{
+    background: var(--color-success);
+}
+
+.category:nth-child(4) .category-icon{
+    background: var(--color-warning);
+}
+
+.category:nth-child(5) .category-icon{
+    background: var(--color-success);
+}
+
+.category {
+    padding: 2rem;
+    border-radius: 2rem;
+    background: var(--color-bg2);
+    transition: var(--transition);
+   
+}
+
+.category:hover {
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, .4);
+}
+
+.category-icon {
+    background: var(--color-primary);
+    padding: .7rem;
+    border-radius: .9rem;
+}
+
+.category h5 {
+    margin: 2rem 0 1rem;
+}
+
+/* ############# CATEGORIES END ############# */
+
+/* ############# COURSE START ############# */
+
+.courses {
+    margin-top: 6rem;
+}
+
+.course-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.course {
+    background: var(--color-bg1);
+    text-align: center;
+    border: 1px solid transparent; 
+    transition: var(--transition);
+}
+
+.course:hover {
+    background: transparent;
+    border-color:var(--color-primary);
+
+}
+
+.course-info {
+    padding: 2rem;
+}
+
+.course-info p {
+    margin: 1.2rem 0 2rem;
+    font-size: .9rem;
+}
+
+/* ############# COURSE END ############# */
+
+/* ############# FAQS START ############# */
+
+.faqs {
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+
+.faqs-container {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap: 1rem  ;
+}
+
+.faq {
+    background: var(--color-primary);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    gap: 1.4rem;
+    cursor: pointer;
+}
+
+.faq h4 {
+    font-size: 1rem;
+    line-height: 2.2rem;
+}
+
+.faq-icon {
+    font-size: 1.2rem;
+    align-self: flex-start;
+}
+
+.faq p {
+    margin-top: .8rem;
+    display: none;
+}
+
+.faq.open p {
+    display: block;
+    height: fit-content;
+}
+/* ############# FAQS END ############# */
+
+/* ############# TESTIMONIAL START ############# */
+.swiper-wrapper {
+    margin-bottom: -5rem;
+}
+
+.container-testimonial {
+    margin-bottom: 5rem;
+    /* margin-top: 1rem; */
+    overflow-x: hidden;
+    position: relative;
+}
+
+.testimonial {
+    padding-top: 2rem;
+}
+
+.testimonial-avater {
+    width: 6rem;
+    height: 6rem;
+    margin: 0 auto 1rem;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1rem solid var(--color-bg1);
+}
+
+.testimonial-info {
+    text-align:center;
+}
+
+.testimonial-detail {
+    background: var(--color-primary);
+    padding: 2rem;
+    margin-top: 3rem;
+    position: relative;
+}
+
+.testimonial-detail::before {
+    content: ""; 
+    position: absolute;
+    background:linear-gradient(130deg, transparent, var(--color-primary),var(--color-primary),var(--color-primary));
+    width: 3rem;
+    height: 3rem;
+    top: -1.5rem;
+    left: 50%;
+    transform: rotate(45deg);
+
+}
+
+/* ############# TESTIMONIAL END ############# */
+
+/* ############# FOOTER START ############# */
+
+footer {
+    /* padding-top: 5rem; */
+    background: var(--color-bg1);
+}
+
+.container-footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5rem;
+}
+
+.container-footer h4 {
+    margin-bottom: 1.2rem;
+}
+
+.footer1 {
+    margin: 0 0 2rem;
+}
+
+footer ul li {
+    margin-bottom: .7rem;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-s-icons {
+    display: flex;
+    gap: 1rem;
+    font: 1.2rem;
+    margin-top: 2rem;
+}
+
+.footer-cpyright {
+    padding: 1.2rem 0;
+    text-align: center;
+    border-top: 1px solid var(--color-bg2);
+}
+/* ############# FOOTER END ############# */
+
+/* ############# MEDIA QUERIES FOR TABLETS ############# */
+
+@media screen and (max-width: 1024px)  {
+    .container {
+        width: var(--container-width-md);
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+    nav button {
+        display: inline-block;
+        background: transparent;
+        color: var(--color-white);
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+    
+    nav button#close-menu-btn {
+        display: none;
+    }
+    
+    .nav_menu {
+        position: fixed; 
+        top: 5rem;
+        right: 5%;
+        height: fit-content;
+        width: 18rem;
+        flex-direction: column;
+        gap: 0;
+        display: none;
+    }
+
+    .nav_menu li {
+        width: 100%;
+        height: 5.8rem;
+    }
+
+    .nav_menu li a {
+        background: var(--color-primary);
+        width: 100%;
+        height: 100%;
+        box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, .6);
+        display: grid;
+        place-items: center;
+    }
+
+    .nav_menu li a:hover {
+        background: var(--color-bg2);
+        color: var(--color-white);
+    }
+
+    /* HEADER */
+
+    header {
+        /* height: vh; */
+        margin-bottom: 4rem;
+    }
+
+    .header_container {
+        gap: 0;
+        padding-bottom: 3rem;
+    }
+
+    /* CATEGORIES */
+
+    .category-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .categories {
+        height: auto;
+    }
+
+    .category-left {
+        margin-right: 0;
+    }
+
+    /* COURSES */
+
+    .courses {
+        margin-top: 0;
+    }
+
+    .course-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* FAQS */
+
+    .faqs-container {
+        grid-template-columns: 1fr;
+    }
+
+    .faq {
+        padding: 1.5rem;
+    }
+
+    /* FOOTER */
+
+    .container-footer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ############# MEDIA QUERIES FOR PHONES ############# */
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: var(--container-width-sm);
+    }
+
+    /* NAV */
+    .nav_menu {
+        right: 3rem;
+    }
+
+    /* HEADER */
+
+    header {
+        height: 100vh;
+        top: 6rem;
+    }
+
+    .header_container {
+        margin-top: 0;
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .header-left p {
+        margin-bottom: 1.3rem;
+    }
+
+    .header-right {
+        margin-top: -10rem 0;
+    }
+    /* CATEGORIES */
+
+    .categories {
+        padding-top: 3rem ;
+        margin: auto;
+    }
+
+    .category-right {
+        grid-template-columns: 1fr 1fr;
+        gap: .7rem;
+    }
+
+    .category {
+        border-radius: 1.5rem;
+        padding: 1rem;
+    }
+
+    .category-icon {
+        margin-top: 4px;
+        display: inline-block;
+    }
+
+    /* COURSES */
+
+    .course-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* TESTIMONIAL */
+
+    .testimonial-detail {
+        padding: 1.2rem;
+    }
+
+    .swiper-wrapper {
+        margin-bottom: -5rem;
+        overflow: hidden;
+    }
+
+
+    /* FAQS */
+
+    .container-footer {
+        text-align: center;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer1 p {
+        margin: 1rem auto;
+    }
+
+    .footer-s-icons {
+        justify-content: center;
+    }
+}
+

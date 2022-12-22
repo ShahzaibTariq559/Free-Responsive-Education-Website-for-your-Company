@@ -1,0 +1,210 @@
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --color-primary: #6c63ff;
+    --color-success: #00bf8e;
+    --color-warning: #f7c94b;
+    --color-danger: #f75842;
+    --color-danger-varient: rgba(247, 88, 66, 0.4);
+    --color-white: white;
+    --color-light: rgba(255, 255, 255, 0.7);
+    --color-black: black;
+    --color-bg: #1f2641;
+    --color-bg1: #2e3267;
+    --color-bg2: #424890;
+    --container-width-lg: 80%;
+    --container-width-md: 90%;
+    --container-width-sm: 94%;
+    --transition: all 400ms ease;
+
+}
+
+
+
+/* ##################################### ABOUT PAGE ############################### */
+
+/* ##################################### ACHIEVEMENT START ############################### */
+
+.about-achievements {
+    margin-top: 3rem;
+}
+
+
+.about-achievements-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 1rem;
+}
+
+.container-right-p {
+    margin: 1.6rem 0 2.5rem;
+}
+
+.achievements-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.achievement-card {
+    background: var(--color-bg1);
+    padding: 1.6rem;
+    text-align: center;
+    border-radius: 1rem;
+    transition: var(--transition);
+}
+
+.achievement-card:hover {
+    background: var(--color-bg2);
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, .3);
+}
+
+.achivement-icon {
+    background: var(--color-danger);
+    padding: 0.6rem;
+    border-radius: .7rem;
+    display: inline-block;  
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.achievement-card:nth-child(2) .achivement-icon{
+    background: var(--color-success);
+}
+
+.achievement-card:nth-child(3) .achivement-icon{
+    background: var(--color-primary);
+}
+
+.achievement-card p {
+    margin-top: 1rem;
+}
+
+/* ##################################### ACHIEVEMENT END ############################### */
+
+/* ##################################### TEAM START ############################### */
+
+.about-team {
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, .5);
+}
+
+.container-team {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+}
+
+.team {
+    background: var(--color-bg2);
+    padding: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+
+}
+
+.team:hover {
+    background: transparent;
+    border-color: var(--color-primary);
+}
+
+.team-image img {
+    filter: saturate(0);
+}
+
+.team-image:hover img {
+    filter: saturate(1);
+}
+
+.team-info *{
+    text-align: center;
+    margin-top: 1.4rem;
+}
+
+.team-info p {
+    color: var(--color-light);
+}
+
+.team-socials {
+    position: absolute;
+    top: 50%;
+    right: -100;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    background: var(--color-primary);
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: -2rem 0 2rem rgba(0, 0, 0, 0.3);
+    transition: var(--transition)
+}
+
+.team:hover .team-socials {
+    right: 0;
+}
+
+.team-socials a {
+    padding: 1rem;
+} 
+/* ##################################### TEAM END ############################### */
+
+/* ##################################### MEDIA QUERIES (TABLETS) ############################### */
+
+@media screen and (max-width:1024px) {
+    .about-achievements {
+        margin-top: 2rem;
+    }
+    
+    .about-achievements-container {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .achievements-container-left {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    /* TEAM */
+
+    .container-team {
+        grid-template-columns: repeat(3,1fr);
+        gap: 1.5rem;
+    }
+
+    .team {
+        padding: 1rem
+    };
+}
+
+/* ##################################### MEDIA QUERIES (MOBILES) ############################### */
+
+@media screen and (max-width: 600px) {
+    .achievements-cards {
+        grid-template-columns: 1fr 1fr;
+        gap: .7rem;
+    }
+
+    .container-team {
+        grid-template-columns: 1fr 1fr;
+        gap: .7rem;
+    }
+
+    .team {
+        padding: 0;
+    }
+
+    .team p {
+        margin-bottom: 1.5rem;
+    }
+}
